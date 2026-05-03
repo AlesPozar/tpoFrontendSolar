@@ -193,13 +193,14 @@ async function handleDisconnect() {
 
   useEffect(() => {
     // Mock mode — odstrani in uncommentaj spodnje ko imaš pravi Binance
+    /*
     setPortfolio(MOCK_PORTFOLIO)
     setHistory({
       currency: MOCK_PORTFOLIO.currency,
       history: generateMockHistory(MOCK_PORTFOLIO.balances, MOCK_PORTFOLIO.currency),
     })
     setLoading(false)
-    /*
+    */
     async function load() {
       try {
         setLoading(true)
@@ -216,7 +217,6 @@ async function handleDisconnect() {
       }
     }
     load()
-    */
   }, [])
 
   const totalAssets = useMemo(() => portfolio?.balances.length ?? 0, [portfolio])
