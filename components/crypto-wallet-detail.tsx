@@ -227,7 +227,7 @@ export function CryptoWalletDetail({ walletId, onBack, onDeleted }: CryptoWallet
       }
 
       const response = await fetch(
-        `${supabaseUrl}/functions/v1/crypto-wallets?walletId=${encodeURIComponent(walletId)}`,
+        `${supabaseUrl}/functions/v1/crypto-wallets?walletId=${encodeURIComponent(walletId)}&refresh=${force ? 'true' : 'false'}`,
         {
           method: 'GET',
           headers: {
